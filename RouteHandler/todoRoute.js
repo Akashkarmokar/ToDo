@@ -88,7 +88,7 @@ route.put('/:id', async (req, res) => {
         const result = await TodoModel.findByIdAndUpdate(
             { _id: req.params.id },
             { $set: { status: 'active' } },
-            { new: true },
+            { new: true }
         );
         res.status(200).json({
             message: 'Data is updated successfully!',
